@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+      <%= f.label :course_id %><br>
+      <%= f.collection_select(:course_id, @courses, :id, :name, include_blank: true) %>
+    </div>
+
+  <div class="field">
     <%= f.label :section_number %>
     <%= f.number_field :section_number %>
   </div>
@@ -32,14 +37,11 @@
   </div>
 
   <div class="field">
-    <%= f.label :professor_id %>
-    <%= f.text_field :professor_id %>
+    <%= f.label :professor_id %><br>
+    <%= f.collection_select(:professor_id, @professors, :id, :name, include_blank: true) %>
   </div>
 
-  <div class="field">
-    <%= f.label :course_id %>
-    <%= f.text_field :course_id %>
-  </div>
+
 
 
   <div class="actions">

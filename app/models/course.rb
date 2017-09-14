@@ -1,3 +1,3 @@
 class Course < ApplicationRecord
-  has_many :courses
+  has_many :sections
 end

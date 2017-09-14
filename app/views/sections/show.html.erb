@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Course:</strong>
+  <%= @section.course.name %>
+</p>
+
+<p>
   <strong>Section number:</strong>
   <%= @section.section_number %>
 </p>
@@ -22,13 +27,11 @@
 
 <p>
   <strong>Professor:</strong>
-  <%= @section.professor %>
+  <%= @section.professor.name %>
 </p>
 
-<p>
-  <strong>Course:</strong>
-  <%= @section.course %>
-</p>
+
+
 
 <%= link_to 'Edit', edit_section_path(@section) %> |
 <%= link_to 'Back', sections_path %>
