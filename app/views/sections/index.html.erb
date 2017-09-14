@@ -2,32 +2,30 @@
 
 <h1>Sections</h1>
 
-<table>
+<table style="width:100">
   <thead>
     <tr>
       <th>Course</th>
-      <th>Section number</th>
-      <th>Name</th>
-      <th>Building</th>
-      <th>Room number</th>
-      <th>Professor</th>
+      <th align="left">Section number</th>
+      <th style="width:15%">Building</th>
+      <th style="width:15%">Room number</th>
+      <th style="width:15%">Professor</th>
 
-      <th colspan="5"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @sections.each do |section| %>
       <tr>
-        <td><%= section.course.name %></td>
-        <td><%= section.section_number %></td>
-        <td><%= section.name %></td>
-        <td><%= section.building %></td>
-        <td><%= section.room_number %></td>
-        <td><%= section.professor.name %></td>
-        <td><%= link_to 'Show', section %></td>
-        <td><%= link_to 'Edit', edit_section_path(section) %></td>
-        <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td align=center><%= section.course.name %></td>
+        <td align=center><%= section.section_number %></td>
+        <td align=center><%= section.building %></td>
+        <td align=center><%= section.room_number %></td>
+        <td align=center><%= section.professor.name %></td>
+        <td align=center><%= link_to 'Show', section %></td>
+        <td align=center><%= link_to 'Edit', edit_section_path(section) %></td>
+        <td align=center><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -37,7 +35,7 @@
 
 <%= link_to 'New Section', new_section_path %>
 <p>
-  <a href= "/courses"> Go to Courses </a>
+     <a href= "/courses"> Go to Courses </a>
 </p>
 <p>
   <a href= "/professors"> Go to Professors </a>

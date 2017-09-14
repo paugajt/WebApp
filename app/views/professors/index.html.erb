@@ -2,12 +2,12 @@
 
 <h1>Professors</h1>
 
-<table>
+<table style="width:65%">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Office</th>
-      <th>Email</th>
+      <th style="width:20%">Name</th>
+      <th style="width:20%">Office</th>
+      <th style="width:20%">Email</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,10 +15,10 @@
   <tbody>
     <% @professors.each do |professor| %>
       <tr>
-        <td><%= professor.name %></td>
-        <td><%= professor.office %></td>
-        <td><%= professor.email %></td>
-        <td><%= link_to 'Show', professor %></td>
+        <td align=center><%= professor.name %></td>
+        <td align=center><%= professor.office %></td>
+        <td align=center><%= professor.email %></td>
+        <td ><%= link_to 'Show', professor %></td>
         <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
         <td><%= link_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

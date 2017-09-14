@@ -10,5 +10,14 @@
   <%= @course.semester %>
 </p>
 
+<p>
+  <strong>Sections:</strong>
+  <ul>
+  <% @course.sections.each do |section| %>
+    <li> Section #<%= section.section_number %>  Professor: <%= section.professor.name %>
+
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
