@@ -10,7 +10,7 @@ class ProfessorsController < ApplicationController
   # GET /professors/1
   # GET /professors/1.json
   def show
-    
+
   end
 
   # GET /professors/new
@@ -60,6 +60,12 @@ class ProfessorsController < ApplicationController
       format.html { redirect_to professors_url, notice: 'Professor was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+
+  def search
+    @professors = Professor.where("name like ?", "%#{params[:q]}%")
+    render :index
   end
 
   private

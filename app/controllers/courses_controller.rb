@@ -16,7 +16,7 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
-    
+
   end
 
   # GET /courses/1/edit
@@ -61,6 +61,12 @@ class CoursesController < ApplicationController
       format.html { redirect_to courses_url, notice: 'Course was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+
+  def search
+    @courses = Course.where("name like ?", "%#{params[:q]}%")
+    render :index
   end
 
   private
