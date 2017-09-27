@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  root 'professors#index'
+  
+  root to:  'professors#index'
+
+  devise_for :users
+
   resources :sections do
     collection do
       get 'search'
