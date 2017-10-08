@@ -20,21 +20,12 @@
   <tbody>
     <% @courses.each do |course| %>
       <tr>
-        <td align=center><%= course.name %></td>
-        <td align=center><%= course.semester %></td>
-        <td align=center><%= link_to 'Show', course %></td>
+        <td align=left><%= course.name %></td>
+        <td align=left><%= course.semester %></td>
+        <td align=left><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Course', new_course_path %>
-<br><br>
-<%= link_to 'Go to Professors', professors_path %>
-<%= link_to 'Go to Sections', sections_path %>
-<br>
-<%= link_to 'Log out', destroy_user_session_path, method: :delete%>

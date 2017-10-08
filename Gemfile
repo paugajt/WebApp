@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+gem 'bootstrap-sass'
 # Gem for authentication
 # See https://github.com/plataformatec/devise for more info
 gem 'devise'

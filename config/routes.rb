@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  
-  root to:  'professors#index'
+
+  root "pages#show", page: "homepage"
+  get "/pages/:page" => "pages#show"
 
   devise_for :users
 
