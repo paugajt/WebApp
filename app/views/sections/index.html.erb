@@ -24,24 +24,15 @@
   <tbody>
     <% @sections.each do |section| %>
       <tr>
-        <td align=center><%= section.course.name %></td>
+        <td align=left><%= section.course.name %></td>
         <td align=center><%= section.section_number %></td>
-        <td align=center><%= section.building %></td>
-        <td align=center><%= section.room_number %></td>
-        <td align=center><%= section.professor.name %></td>
-        <td align=center><%= link_to 'Show', section %></td>
-        <td align=center><%= link_to 'Edit', edit_section_path(section) %></td>
-        <td align=center><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td align=left><%= section.building %></td>
+        <td align=left><%= section.room_number %></td>
+        <td align=left><%= section.professor.name %></td>
+        <td align=left><%= link_to 'Show', section %></td>
+        <td align=left><%= link_to 'Edit', edit_section_path(section) %></td>
+        <td align=left><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Section', new_section_path %>
-<br><br>
-<%= link_to 'Go to Courses', courses_path %>
-<%= link_to 'Go to Professors', professors_path %>
-<br>
-<%= link_to 'Log out', destroy_user_session_path, method: :delete%>
