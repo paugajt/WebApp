@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :students
   root "pages#show", page: "homepage"
   get "/pages/:page" => "pages#show"
 
