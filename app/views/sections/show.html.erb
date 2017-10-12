@@ -24,6 +24,25 @@
   <strong>Professor:</strong>
   <%= @section.professor.name %>
 </p>
+<p>
+  <strong>Student List</strong>
+  <table class="table">
+    <thread>
+      <tr>
+        <th>Student Name</th>
+      </tr>
+
+      <tbody>
+        <% @section.students.each do |student| %>
+        <tr>
+          <td><%= student.name %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    
+  </thread>
+</table>
+</p>
 
 
 

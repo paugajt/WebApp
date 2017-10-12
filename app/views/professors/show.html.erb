@@ -21,6 +21,7 @@
       <tr>
         <th>Course:</th>
         <th>Section Number</th>
+        <th>Students List</th>
       </tr>
 
       <tbody>
@@ -28,6 +29,7 @@
         <tr>
           <td><%= section.course.name %></td>
           <td><%= section.section_number %></td>
+          <td><%= link_to 'Students', section %>
         </tr>
         <% end %>
       </tbody>

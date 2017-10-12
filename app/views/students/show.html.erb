@@ -27,6 +27,8 @@
       <tr>
         <th>Course:</th>
         <th>Section Number</th>
+        <th>Professor</th>
+        <th>Section Information</th>
       </tr>
 
       <tbody>
@@ -34,6 +36,8 @@
         <tr>
           <td><%= section.course.name %></td>
           <td><%= section.section_number %></td>
+          <td><%= section.professor.name %></td>
+          <td><%= link_to 'show', section %></td>
         </tr>
         <% end %>
       </tbody>
