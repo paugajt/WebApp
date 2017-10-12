@@ -73,6 +73,7 @@ class SectionsController < ApplicationController
     render :index
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_section
@@ -81,6 +82,6 @@ class SectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def section_params
-      params.require(:section).permit(:section_number, :building, :room_number, :professor_id, :course_id, :student_id =>[])
+      params.require(:section).permit(:section_number, :building, :room_number, :professor_id, :course_id, :student_id => [])
     end
 end

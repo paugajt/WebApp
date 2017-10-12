@@ -34,6 +34,7 @@
   <div class="field">
     <%= f.label :section_id %><br>
     <%= f.collection_check_boxes(:section_ids, @sections, :id, :section_number, include_blank: true) %>
+    <br>
   </div>
 
   <div class="actions">

@@ -8,7 +8,7 @@
   <%= submit_tag("Search") %>
 <% end %>
 
-<table style="width:65%">
+<table class="table" style="width:65%">
   <thead>
     <tr>
       <th style="width:20%" >Name</th>
@@ -32,4 +32,4 @@
   </tbody>
 </table>
 
-<%= link_to 'New Professor', new_professor_path %>
+<%= button_to 'New Professor', new_professor_path, :method => "get" %>
