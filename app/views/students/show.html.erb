@@ -22,12 +22,27 @@
 
 <p>
 	<strong>Classes:</strong>
-	<ul>
-  <% @student.sections.each do |section| %>
-    <li> <%= section.course.name %>-<%= section.section_number %>
+  <table class="table">
+    <thread>
+      <tr>
+        <th>Course:</th>
+        <th>Section Number</th>
+      </tr>
 
-  <% end %>
-</ul>
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+      <tbody>
+        <% @student.sections.each do |section| %>
+        <tr>
+          <td><%= section.course.name %></td>
+          <td><%= section.section_number %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    
+  </thread>
+</table>
+</p>
+	
+<div class="btn-group">
+<button><%= link_to 'Edit', edit_student_path(@student) %></button>
+<button><%= link_to 'Back', students_path %></button>
+</div>

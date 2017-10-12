@@ -16,14 +16,29 @@
 
 <p>
   <strong>Courses and Sections:</strong>
-  <ul>
-  <% @professor.sections.each do |section| %>
-    <li> <%= section.course.name %>-<%= section.section_number %>
-  <% end %>
-</ul>
+  <table class="table">
+    <thread>
+      <tr>
+        <th>Course:</th>
+        <th>Section Number</th>
+      </tr>
+
+      <tbody>
+        <% @professor.sections.each do |section| %>
+        <tr>
+          <td><%= section.course.name %></td>
+          <td><%= section.section_number %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    
+  </thread>
+</table>
+</p>
+  
 
 
-
-
-<%= link_to 'Edit', edit_professor_path(@professor) %> |
-<%= link_to 'Back', professors_path %>
+<div class="btn-group">
+<button><%= link_to 'Edit', edit_professor_path(@professor) %> </button>
+<button><%= link_to 'Back', professors_path %></button>
+</div>
